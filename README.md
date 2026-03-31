@@ -73,6 +73,7 @@
 28. UI cosmetics host etc.
 29. Create build scripts
 30. fix tailwind install
+31. fix footer always visible, add scrollbar to main instead of whole app
 
 
 ## Run
