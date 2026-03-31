@@ -10,7 +10,10 @@
     "build:mf_remote_c": "nx run mf_remote_c:build",
     "build-libs:all": "nx run-many -t build --projects=common-ui-lib",
     "build-apps:all": "nx run-many -t build --projects=main-host,mf_remote_a,mf_remote_b,mf_remote_c",
-    "build:all": "nx run-many -t build --all"
+    "build:all": "nx run-many -t build --all",
+    "gh-build": "node scripts/gh-build.mjs",
+    "gh-stage": "node scripts/gh-stage.mjs",
+    "gh-deploy": "node scripts/gh-deploy.mjs"
   },
   "private": true,
   "devDependencies": {
@@ -43,6 +46,7 @@
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^10.0.0",
     "eslint-plugin-playwright": "^1.6.2",
+    "gh-pages": "^6.3.0",
     "jsdom": "^27.1.0",
     "jsonc-eslint-parser": "^2.1.0",
     "ng-packagr": "~21.2.0",

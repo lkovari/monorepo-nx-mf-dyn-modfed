@@ -1,4 +1,4 @@
-# monorepo-nx-mf-dyn-modfed
+# monorepo-nx-mf-dyn-modfed with esbuild
 
 ## Create from the scratch
 
@@ -85,3 +85,10 @@
 5. pnpm exec nx run main-host:serve
 
 6. pnpm exec nx run-many -t serve -p main-host,mf_remote_a,mf_remote_b,mf_remote_c
+
+# github pages
+
+## Project site; replace with your real repo name segment in the URL
+GH_PAGES_BASE=/monorepo-nx-mf-dyn-modfed/ pnpm run gh-build
+## Deploy (pushes to branch gh-pages on origin)
+GH_PAGES_BASE=/monorepo-nx-mf-dyn-modfed/ pnpm run gh-deploy
