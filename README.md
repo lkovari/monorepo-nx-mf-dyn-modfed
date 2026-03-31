@@ -59,4 +59,14 @@
 16. npx nx g @nx/angular:component libs/common-ui-lib/src/lib/nx-version/angular-version.ts --standalone --export --no-interactive
 17. px nx g @nx/angular:component libs/common-ui-lib/src/lib/nx-version/nx-version.ts --standalone --export --no-interactive
 18. implement (fake) nx-version and angular-version component logic
-19. 
+19. npx nx generate @nx/angular:component --path=apps/main-host/src/app/shared/components/header/header --standalone
+20. npx nx generate @nx/angular:component --path=apps/main-host/src/app/shared/components/main/main --standalone
+21. npx nx generate @nx/angular:component --path=apps/main-host/src/app/shared/components/footer/footer --standalone
+22. npx nx generate @nx/angular:component --path=apps/main-host/src/app/shared/components/layout/layout --standalone
+23. implement header, main, footer, layout logic
+24. get rid of the component NxWelcome
+25. pnpm install tailwindcss @tailwindcss/postcss postcss --force
+26. add .postcssrc.json
+27. add @import "tailwindcss"; to all styles.css
+28. UI cosmetics host etc.
+29. Create build scripts
