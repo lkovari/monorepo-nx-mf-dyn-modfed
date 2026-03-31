@@ -83,3 +83,5 @@
 3. pnpm exec nx run mf_remote_b:serve
 4. pnpm exec nx run mf_remote_a:serve
 5. pnpm exec nx run main-host:serve
+
+6. pnpm exec nx run-many -t serve -p main-host,mf_remote_a,mf_remote_b,mf_remote_c
