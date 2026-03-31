@@ -1,5 +1,5 @@
 {
-	"mfRemoteA": "http://localhost:4201/remoteEntry.json",
-	"mfRemoteB": "http://localhost:4202/remoteEntry.json",
-	"mfRemoteC": "http://localhost:4203/remoteEntry.json"
+	"mf_remote_a": "http://localhost:4201/remoteEntry.json",
+	"mf_remote_b": "http://localhost:4202/remoteEntry.json",
+	"mf_remote_c": "http://localhost:4203/remoteEntry.json"
 }

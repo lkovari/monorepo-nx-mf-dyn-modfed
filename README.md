@@ -45,7 +45,18 @@
   --port=4202 \
   --type=remote
 12. pnpm exec nx g @angular-architects/native-federation:init \
-  --project=mf_remote_home \
+  --project=mf_remote_c \
   --port=4203 \
   --type=remote
-  
+13. create content of the federation.manifest.json of main-host
+14. Implement routes based on the angulararchitects.io native federation
+15. pnpm exec nx g @nx/angular:library \
+  --directory=libs/common-ui-lib \
+  --standalone \
+  --buildable \
+  --publishable=false
+  (get rid of the common-ui-lib it represent a component)
+16. npx nx g @nx/angular:component libs/common-ui-lib/src/lib/nx-version/angular-version.ts --standalone --export --no-interactive
+17. px nx g @nx/angular:component libs/common-ui-lib/src/lib/nx-version/nx-version.ts --standalone --export --no-interactive
+18. implement (fake) nx-version and angular-version component logic
+19. 
