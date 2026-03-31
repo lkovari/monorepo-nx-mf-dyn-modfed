@@ -1,5 +1,7 @@
 # monorepo-nx-mf-dyn-modfed
 
+## Create from the scratch
+
 1. pnpm dlx create-nx-workspace@latest nx-mf-df --preset=apps
 2. cd nx-mf-df
 3. pnpm add -D @nx/angular
@@ -70,3 +72,13 @@
 27. add @import "tailwindcss"; to all styles.css
 28. UI cosmetics host etc.
 29. Create build scripts
+30. fix tailwind install
+
+
+## Run
+
+1. cd nx-mf-df
+2. pnpm exec nx run mf_remote_c:serve
+3. pnpm exec nx run mf_remote_b:serve
+4. pnpm exec nx run mf_remote_a:serve
+5. pnpm exec nx run main-host:serve
