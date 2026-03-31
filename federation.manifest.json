@@ -1,0 +1,5 @@
+{
+	"mf_remote_a": "/monorepo-nx-mf-dyn-modfed/mf_remote_a/remoteEntry.json",
+	"mf_remote_b": "/monorepo-nx-mf-dyn-modfed/mf_remote_b/remoteEntry.json",
+	"mf_remote_c": "/monorepo-nx-mf-dyn-modfed/mf_remote_c/remoteEntry.json"
+}
