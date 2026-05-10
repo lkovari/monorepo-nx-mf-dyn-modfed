@@ -1,7 +1,13 @@
 import { Route } from '@angular/router';
 import { loadRemoteModule } from '@angular-architects/native-federation';
 
+import { Home } from './home/home';
+
 export const appRoutes: Route[] = [
+    {
+        path: '',
+        component: Home,
+    },
     {
         path: 'mf_remote_a',
         loadComponent: () =>
@@ -16,10 +22,5 @@ export const appRoutes: Route[] = [
         path: 'mf_remote_c',
         loadComponent: () =>
             loadRemoteModule('mf_remote_c', './Component').then((m) => m.App),
-    },
-    {
-        path: '',
-        redirectTo: '/mf_remote_a',
-        pathMatch: 'full',
     },
 ];

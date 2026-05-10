@@ -3,7 +3,7 @@ import { Layout } from './shared/components/layout/layout';
 
 @Component({
   imports: [Layout],
-  selector: 'nxmfdf-root',
+  selector: 'nxmfdf-main-host-root',
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

@@ -1,8 +1,9 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, inject, ViewEncapsulation } from '@angular/core';
+import { PlatformWelcomeLastMessageService } from '@nx-mf-df/common-ui-lib';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'nxmfdf-nx-welcome',
+  selector: 'nxmfdf-mf-remote-a-welcome',
   imports: [CommonModule],
   template: `
     <!--
@@ -124,6 +125,19 @@ import { CommonModule } from '@angular/common';
         font-weight: 300;
         line-height: 2.25rem;
         margin-bottom: 0.5rem;
+      }
+      #welcome .welcome-last-platform-msg {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-size: clamp(1rem, 2.75vw, 1.25rem);
+        line-height: 1.5;
+      }
+      #welcome .welcome-last-platform-msg span {
+        display: inline;
+        font-size: clamp(1rem, 2.75vw, 1.25rem);
+        line-height: inherit;
+        font-weight: 400;
+        margin-bottom: 0;
       }
       #hero {
         align-items: center;
@@ -515,6 +529,19 @@ import { CommonModule } from '@angular/common';
             <span> Hello there, </span>
             Welcome mf_remote_a 👋
           </h1>
+          @if (lastMessageParts(); as lm) {
+            <div class="welcome-last-platform-msg">
+              <span class="text-sky-300">Last message: </span>
+              <span class="text-sky-300">from </span>
+              <span class="text-[magenta]">{{ lm.source }}</span>
+              <span class="text-sky-300"> to </span>
+              <span class="text-[magenta]">{{ lm.to }}</span>
+              <span class="text-sky-300">, with title: </span>
+              <span class="text-[magenta]">{{ lm.title }}</span>
+              <span class="text-sky-300"> message: </span>
+              <span class="text-[magenta]">{{ lm.body }}</span>
+            </div>
+          }
         </div>
         <!--  HERO  -->
         <div id="hero" class="rounded">
@@ -928,26 +955,14 @@ nx g &#64;nx/angular:lib ui
 nx g &#64;nx/angular:component ui/src/lib/button</pre>
           </details>
         </div>
-        <p id="love">
-          Carefully crafted with
-          <svg
-            fill="currentColor"
-            stroke="none"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-            />
-          </svg>
-        </p>
       </div>
     </div>
   `,
   styles: [],
   encapsulation: ViewEncapsulation.None,
 })
-export class NxWelcome {}
+export class NxWelcome {
+  private readonly welcomeLast = inject(PlatformWelcomeLastMessageService);
+
+  protected readonly lastMessageParts = this.welcomeLast.parts;
+}
