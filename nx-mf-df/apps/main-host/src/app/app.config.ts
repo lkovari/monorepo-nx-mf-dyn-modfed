@@ -5,34 +5,21 @@ import {
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideRouter } from '@angular/router';
 import { provideBus, provideHostBridge } from '@lkovari/microfrontend-platform-communication/angular';
-import { TopicRegistry } from '@lkovari/microfrontend-platform-communication/core';
 import { MessageService } from 'primeng/api';
 import {
-  ALL_PARTICIPANT_IDS,
-  PLATFORM_MESSAGE_V1,
-  PLATFORM_PARTICIPANT_ID,
-  platformMessageEventSchema,
-  providePlatformMessageListenerBootstrap,
-  provideWorkspacePrimeNG,
-  SHELL_HOST_ID,
+  createPlatformMessagingTopicRegistry,
   MF_REMOTE_A_ID,
   MF_REMOTE_B_ID,
   MF_REMOTE_C_ID,
+  platformMessagingValidators,
+  PLATFORM_PARTICIPANT_ID,
+  provideDemoShellH2rQueryRemoteHandlerBootstrap,
+  providePlatformMessageListenerBootstrap,
+  provideWorkspacePrimeNG,
+  SHELL_HOST_ID,
 } from '@nx-mf-df/common-ui-lib';
 
 import { appRoutes } from './app.routes';
-
-const platformTopicRegistry = (): TopicRegistry => {
-  const registry = new TopicRegistry();
-  registry.register({
-    messageName: PLATFORM_MESSAGE_V1,
-    allowedPublishers: [...ALL_PARTICIPANT_IDS],
-    allowedSubscribers: [...ALL_PARTICIPANT_IDS],
-    minMessageVersion: 1,
-    maxMessageVersion: 1,
-  });
-  return registry;
-};
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -43,14 +30,12 @@ export const appConfig: ApplicationConfig = {
       appId: SHELL_HOST_ID,
       defaultSubscriberId: SHELL_HOST_ID,
       dispatch: 'microtask',
-      validators: {
-        [PLATFORM_MESSAGE_V1]: platformMessageEventSchema,
-      },
+      validators: platformMessagingValidators,
       dedupe: {
         enabled: true,
         windowMs: 5000,
       },
-      registry: platformTopicRegistry(),
+      registry: createPlatformMessagingTopicRegistry(),
       allowUnregisteredMessageNames: false,
     }),
     provideHostBridge({
@@ -61,5 +46,6 @@ export const appConfig: ApplicationConfig = {
     MessageService,
     { provide: PLATFORM_PARTICIPANT_ID, useValue: SHELL_HOST_ID },
     providePlatformMessageListenerBootstrap(),
+    provideDemoShellH2rQueryRemoteHandlerBootstrap(),
   ],
 };

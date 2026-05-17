@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-mf-df/common-ui-lib": ["libs/common-ui-lib/src/index.ts"]
+      "@nx-mf-df/common-ui-lib": ["libs/common-ui-lib/src/index.ts"],
+      "@nx-mf-df/contracts-platform-messaging": [
+        "libs/contracts-platform-messaging/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

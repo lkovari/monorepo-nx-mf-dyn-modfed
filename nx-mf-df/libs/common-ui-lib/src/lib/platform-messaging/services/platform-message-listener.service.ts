@@ -14,20 +14,18 @@ import { MessageService } from 'primeng/api';
 import { BUS_TOKEN } from '@lkovari/microfrontend-platform-communication/angular';
 import type { MessageBase } from '@lkovari/microfrontend-platform-communication/contracts';
 import type { Unsubscribe } from '@lkovari/microfrontend-platform-communication/core';
-import { filter } from 'rxjs';
-
-import { PLATFORM_MESSAGE_V1 } from '../message-names';
-import {
-  platformMessageEventSchema,
-  type PlatformMessageEvent,
-} from '../platform-message/platform-message.schema';
-import { takeReplayMessagesForParticipant } from '../platform-message/platform-message-replay.storage';
 import {
   MF_REMOTE_A_ID,
   MF_REMOTE_B_ID,
   MF_REMOTE_C_ID,
+  PLATFORM_MESSAGE_V1,
+  platformMessageEventSchema,
   SHELL_HOST_ID,
-} from '../participant-ids';
+  type PlatformMessageEvent,
+} from '@nx-mf-df/contracts-platform-messaging';
+import { filter } from 'rxjs';
+
+import { takeReplayMessagesForParticipant } from '../platform-message/platform-message-replay.storage';
 import {
   PLATFORM_MESSAGE_IGNORE_SELF_ORIGINATED,
   PLATFORM_PARTICIPANT_ID,
@@ -36,6 +34,8 @@ import { RemotePlatformBusService } from './remote-platform-bus.service';
 
 export interface PlatformMessageHistoryEntry {
   readonly id: string;
+  readonly messageName: string;
+  readonly eventKind: string;
   readonly source: string;
   readonly target: string | undefined;
   readonly severity: 'info' | 'success' | 'warn' | 'error';
@@ -189,6 +189,8 @@ export class PlatformMessageListenerService {
     const payload = evt.payload;
     const entry: PlatformMessageHistoryEntry = {
       id: crypto.randomUUID(),
+      messageName: evt.messageName,
+      eventKind: evt.eventKind,
       source: evt.source,
       target: evt.target,
       severity: payload.severity,
@@ -203,7 +205,7 @@ export class PlatformMessageListenerService {
     this.appendHistory(evt);
     const payload = evt.payload;
     const summary = `${payload.title}`;
-    const detail = `[${evt.source} → ${evt.target ?? 'broadcast'}] ${payload.body}`;
+    const detail = `[${evt.messageName}] ${evt.source} → ${evt.target ?? 'broadcast'} · ${payload.body}`;
     const svc = this.messageService;
     if (!svc) {
       return;

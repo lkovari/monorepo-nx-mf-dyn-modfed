@@ -2,6 +2,7 @@ import { Injectable, inject } from '@angular/core';
 import type { AckResult } from '@lkovari/microfrontend-platform-communication/contracts';
 import type { MessageBase } from '@lkovari/microfrontend-platform-communication/contracts';
 import { HOST_BRIDGE_TOKEN } from '@lkovari/microfrontend-platform-communication/angular';
+import { platformMessageEventSchema } from '@nx-mf-df/contracts-platform-messaging';
 
 import { appendPlatformMessageForReplay } from '../platform-message/platform-message-replay.storage';
 import { RemotePlatformBusService } from './remote-platform-bus.service';
@@ -20,7 +21,10 @@ export class MessageSenderService {
       ? handle.tryPublish(message)
       : this.remoteBus.tryPublish(message);
     if (result !== null && result.accepted) {
-      appendPlatformMessageForReplay(message);
+      const parsed = platformMessageEventSchema.safeParse(message);
+      if (parsed.success) {
+        appendPlatformMessageForReplay(parsed.data);
+      }
     }
     return result;
   }

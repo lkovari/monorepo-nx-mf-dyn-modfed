@@ -17,22 +17,8 @@
     />
   </div>
   <div class="flex flex-col gap-0.5">
-    <label class="text-xs font-medium text-slate-700" for="composer-kind"
-      >Kind</label
-    >
-    <p-select
-      formControlName="kind"
-      inputId="composer-kind"
-      class="w-full"
-      [options]="kindOptions"
-      optionLabel="label"
-      optionValue="value"
-    ></p-select>
-    @if (form.hasError('unsupportedKind')) {
-      <p class="text-sm text-amber-700">
-        Only event messages are supported in this composer.
-      </p>
-    }
+    <span class="text-xs font-medium text-slate-700">Message contract</span>
+    <p class="text-sm text-slate-600">{{ messageContractLabel }}</p>
   </div>
   <div class="flex flex-col gap-0.5">
     <label class="text-xs font-medium text-slate-700" for="composer-sensitivity"

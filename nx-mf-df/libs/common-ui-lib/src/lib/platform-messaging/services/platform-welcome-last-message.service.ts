@@ -11,11 +11,11 @@ import { BUS_TOKEN } from '@lkovari/microfrontend-platform-communication/angular
 import type { MessageBase } from '@lkovari/microfrontend-platform-communication/contracts';
 import type { Unsubscribe } from '@lkovari/microfrontend-platform-communication/core';
 
-import { PLATFORM_MESSAGE_V1 } from '../message-names';
 import {
+  PLATFORM_MESSAGE_V1,
   platformMessageEventSchema,
   type PlatformMessageEvent,
-} from '../platform-message/platform-message.schema';
+} from '@nx-mf-df/contracts-platform-messaging';
 import { peekReplayMessagesForParticipant } from '../platform-message/platform-message-replay.storage';
 import { RemotePlatformBusService } from './remote-platform-bus.service';
 import { WELCOME_REMOTE_PARTICIPANT_ID } from '../welcome-remote-participant.token';

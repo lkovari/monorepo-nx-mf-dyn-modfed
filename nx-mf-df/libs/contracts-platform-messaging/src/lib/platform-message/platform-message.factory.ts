@@ -1,8 +1,9 @@
 import type { Sensitivity } from '@lkovari/microfrontend-platform-communication/contracts';
 
-import { BROADCAST_TARGET_VALUE } from '../message-options';
-import { PLATFORM_MESSAGE_V1 } from '../message-names';
+import { PLATFORM_MESSAGE_V1 } from './message-names';
 import type { PlatformMessageEvent, PlatformMessagePayload } from './platform-message.schema';
+
+export const PLATFORM_BROADCAST_TARGET_SENTINEL = '__broadcast__';
 
 export interface CreatePlatformEventMessageInput {
   readonly source: string;
@@ -33,7 +34,7 @@ export function createPlatformEventMessage(
   const resolvedTarget =
     rawTarget === undefined ||
     rawTarget === '' ||
-    rawTarget === BROADCAST_TARGET_VALUE
+    rawTarget === PLATFORM_BROADCAST_TARGET_SENTINEL
       ? undefined
       : rawTarget;
   if (resolvedTarget !== undefined) {

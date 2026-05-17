@@ -107,6 +107,7 @@
 .header-toolbar {
     justify-content: flex-end;
     min-width: 0;
+    row-gap: clamp(0.25rem, 1vw, 0.5rem);
 }
 
 .header-nav {
@@ -132,4 +133,30 @@
 .header-nav a.active {
     background-color: #4a5568;
     font-weight: 600;
+}
+
+.header-messaging {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(0.25rem, 1vw, 0.5rem);
+    max-inline-size: 100%;
+}
+
+@container header (max-width: 30rem) {
+    .header-toolbar {
+        flex-wrap: wrap;
+        row-gap: clamp(0.375rem, 1.5vw, 0.5rem);
+    }
+
+    .header-messaging {
+        order: 3;
+        flex: 1 1 100%;
+        justify-content: center;
+        border-left: none;
+        padding-left: 0;
+        padding-top: clamp(0.25rem, 1vw, 0.375rem);
+        border-top: 1px solid rgb(148 163 184 / 0.35);
+    }
 }

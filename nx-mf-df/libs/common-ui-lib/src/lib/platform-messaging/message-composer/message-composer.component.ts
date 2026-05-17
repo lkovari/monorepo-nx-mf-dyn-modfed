@@ -8,16 +8,13 @@ import {
   output,
   Signal,
 } from '@angular/core';
-import {
-  AbstractControl,
-  FormBuilder,
-  FormGroup,
-  ReactiveFormsModule,
-  ValidationErrors,
-  ValidatorFn,
-  Validators,
-} from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import type { Sensitivity } from '@lkovari/microfrontend-platform-communication/contracts';
+import {
+  ALL_PARTICIPANT_IDS,
+  createPlatformEventMessage,
+  PLATFORM_MESSAGE_V1,
+} from '@nx-mf-df/contracts-platform-messaging';
 import { MessageService } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
@@ -26,13 +23,10 @@ import { TextareaModule } from 'primeng/textarea';
 
 import {
   BROADCAST_TARGET_VALUE,
-  PLATFORM_MESSAGE_KIND_OPTIONS,
   PLATFORM_SENSITIVITY_OPTIONS,
   PLATFORM_SEVERITY_OPTIONS,
 } from '../message-options';
 import { MessageSenderService } from '../services/message-sender.service';
-import { ALL_PARTICIPANT_IDS } from '../participant-ids';
-import { createPlatformEventMessage } from '../platform-message/platform-message.factory';
 
 @Component({
   selector: 'lib-message-composer',
@@ -62,7 +56,7 @@ export class MessageComposerComponent {
 
   private readonly messages = inject(MessageService);
 
-  protected readonly kindOptions = PLATFORM_MESSAGE_KIND_OPTIONS;
+  protected readonly messageContractLabel = `${PLATFORM_MESSAGE_V1} (event)`;
 
   protected readonly sensitivityOptions = PLATFORM_SENSITIVITY_OPTIONS;
 
@@ -73,33 +67,27 @@ export class MessageComposerComponent {
   >;
 
   constructor() {
-    this.form = this.fb.group(
-      {
-        source: this.fb.nonNullable.control('', [
-          Validators.required,
-          Validators.minLength(1),
-        ]),
-        kind: this.fb.nonNullable.control<
-          (typeof PLATFORM_MESSAGE_KIND_OPTIONS)[number]['value']
-        >('event', Validators.required),
-        sensitivity: this.fb.nonNullable.control<
-          (typeof PLATFORM_SENSITIVITY_OPTIONS)[number]['value']
-        >('public', Validators.required),
-        severity: this.fb.nonNullable.control<
-          (typeof PLATFORM_SEVERITY_OPTIONS)[number]['value']
-        >('info', Validators.required),
-        title: this.fb.nonNullable.control('', [
-          Validators.required,
-          Validators.minLength(1),
-        ]),
-        body: this.fb.nonNullable.control('', [
-          Validators.required,
-          Validators.minLength(1),
-        ]),
-        target: this.fb.nonNullable.control<string>(BROADCAST_TARGET_VALUE),
-      },
-      { validators: kindMustBeEventValidator },
-    );
+    this.form = this.fb.group({
+      source: this.fb.nonNullable.control('', [
+        Validators.required,
+        Validators.minLength(1),
+      ]),
+      sensitivity: this.fb.nonNullable.control<
+        (typeof PLATFORM_SENSITIVITY_OPTIONS)[number]['value']
+      >('public', Validators.required),
+      severity: this.fb.nonNullable.control<
+        (typeof PLATFORM_SEVERITY_OPTIONS)[number]['value']
+      >('info', Validators.required),
+      title: this.fb.nonNullable.control('', [
+        Validators.required,
+        Validators.minLength(1),
+      ]),
+      body: this.fb.nonNullable.control('', [
+        Validators.required,
+        Validators.minLength(1),
+      ]),
+      target: this.fb.nonNullable.control<string>(BROADCAST_TARGET_VALUE),
+    });
     this.targetOptions = computed(() =>
       buildTargetSelectOptions(this.currentAppId()),
     );
@@ -179,13 +167,3 @@ function buildTargetSelectOptions(currentAppId: string): {
 function isSensitivity(value: string): value is Sensitivity {
   return value === 'public' || value === 'internal';
 }
-
-const kindMustBeEventValidator: ValidatorFn = (
-  control: AbstractControl,
-): ValidationErrors | null => {
-  if (!(control instanceof FormGroup)) {
-    return null;
-  }
-  const kind = control.get('kind')?.value;
-  return kind === 'event' ? null : { unsupportedKind: true };
-};

@@ -17,6 +17,7 @@
               <span class="text-slate-500">{{ entry.occurredAtUtc }}</span>
             </div>
             <div class="mt-1 text-[11px] text-slate-600">
+              {{ entry.messageName }} · {{ entry.eventKind }} ·
               {{ entry.source }} → {{ entry.target ?? 'broadcast' }} ·
               {{ entry.severity }}
             </div>

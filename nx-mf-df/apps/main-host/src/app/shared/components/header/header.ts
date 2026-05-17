@@ -4,19 +4,25 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { filter, map } from 'rxjs';
 import {
+  DemoShellH2rQuerySuiteComponent,
   PlatformMessagingTriggerComponent,
   resolvePlatformParticipantIdFromPath,
 } from '@nx-mf-df/common-ui-lib';
 
 @Component({
   selector: 'nxmfdf-header',
-  imports: [DatePipe, RouterModule, PlatformMessagingTriggerComponent],
+  imports: [
+    DatePipe,
+    RouterModule,
+    PlatformMessagingTriggerComponent,
+    DemoShellH2rQuerySuiteComponent,
+  ],
   templateUrl: './header.html',
   styleUrl: './header.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Header {
-  readonly lastUpdate = Date.parse('2026-05-10T02:31:00');
+  readonly lastUpdate = Date.parse('2026-05-17T04:32:00');
 
   private readonly router = inject(Router);
 

@@ -1,7 +1,7 @@
 import { EventMessageSchema } from '@lkovari/microfrontend-platform-communication/schemas';
 import { z } from 'zod';
 
-import { PLATFORM_MESSAGE_V1 } from '../message-names';
+import { PLATFORM_MESSAGE_V1 } from './message-names';
 
 export const platformMessagePayloadSchema = z.object({
   title: z.string().min(1),

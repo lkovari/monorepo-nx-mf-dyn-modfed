@@ -5,6 +5,7 @@
   "prefix": "lib",
   "projectType": "library",
   "tags": [],
+  "implicitDependencies": ["contracts-platform-messaging"],
   "targets": {
     "build": {
       "executor": "@nx/angular:ng-packagr-lite",

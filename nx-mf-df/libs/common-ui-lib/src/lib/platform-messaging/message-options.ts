@@ -1,13 +1,6 @@
-export const PLATFORM_MESSAGE_KIND_OPTIONS: {
-  label: string;
-  value: string;
-}[] = [
-  { label: 'event', value: 'event' },
-  { label: 'command', value: 'command' },
-  { label: 'query', value: 'query' },
-  { label: 'state', value: 'state' },
-  { label: 'user-context', value: 'user-context' },
-];
+import { PLATFORM_BROADCAST_TARGET_SENTINEL } from '@nx-mf-df/contracts-platform-messaging';
+
+export const BROADCAST_TARGET_VALUE = PLATFORM_BROADCAST_TARGET_SENTINEL;
 
 export const PLATFORM_SENSITIVITY_OPTIONS: {
   label: string;
@@ -26,5 +19,3 @@ export const PLATFORM_SEVERITY_OPTIONS: {
   { label: 'warn', value: 'warn' },
   { label: 'error', value: 'error' },
 ];
-
-export const BROADCAST_TARGET_VALUE = '__broadcast__';

@@ -1,114 +1,67 @@
-import type { MessageBase } from '@lkovari/microfrontend-platform-communication/contracts';
+import type { PlatformMessageEvent } from '@nx-mf-df/contracts-platform-messaging';
 
-import {
-  platformMessageEventSchema,
-  type PlatformMessageEvent,
-} from './platform-message.schema';
+const STORAGE_KEY = 'nx-mf-df.platform-message.replay';
 
-const STORAGE_KEY = 'nxmfdf-platform-msg-replay-v1';
-
-const MAX_STORED = 40;
-
-function readBucket(): unknown[] {
+function readStore(): PlatformMessageEvent[] {
   if (typeof sessionStorage === 'undefined') {
     return [];
   }
   const raw = sessionStorage.getItem(STORAGE_KEY);
-  if (!raw) {
+  if (raw === null || raw === '') {
     return [];
   }
   try {
     const parsed: unknown = JSON.parse(raw);
-    return Array.isArray(parsed) ? parsed : [];
+    if (!Array.isArray(parsed)) {
+      return [];
+    }
+    return parsed as PlatformMessageEvent[];
   } catch {
     return [];
   }
 }
 
-function writeBucket(items: unknown[]): void {
+function writeStore(messages: PlatformMessageEvent[]): void {
   if (typeof sessionStorage === 'undefined') {
     return;
   }
-  sessionStorage.setItem(STORAGE_KEY, JSON.stringify(items));
+  sessionStorage.setItem(STORAGE_KEY, JSON.stringify(messages));
 }
 
-function trimBucket(bucket: unknown[]): void {
-  while (bucket.length > MAX_STORED) {
-    bucket.shift();
+export function appendPlatformMessageForReplay(
+  message: PlatformMessageEvent,
+): void {
+  const store = readStore();
+  store.push(message);
+  if (store.length > 50) {
+    store.splice(0, store.length - 50);
   }
+  writeStore(store);
 }
 
-function isBroadcastEvent(evt: PlatformMessageEvent): boolean {
-  const t = evt.target;
-  return t === undefined || t === '';
-}
-
-export function appendPlatformMessageForReplay(message: MessageBase): void {
-  const parsedMsg = platformMessageEventSchema.safeParse(message);
-  if (!parsedMsg.success) {
-    return;
+function messageMatchesParticipant(
+  message: PlatformMessageEvent,
+  participantId: string,
+): boolean {
+  const target = message.target;
+  if (target === undefined || target === '') {
+    return true;
   }
-  const evt = parsedMsg.data;
-  if (isBroadcastEvent(evt)) {
-    const bucket = readBucket();
-    const withoutBroadcasts = bucket.filter((item) => {
-      const p = platformMessageEventSchema.safeParse(item);
-      if (!p.success) {
-        return true;
-      }
-      return !isBroadcastEvent(p.data);
-    });
-    withoutBroadcasts.push(evt);
-    trimBucket(withoutBroadcasts);
-    writeBucket(withoutBroadcasts);
-    return;
-  }
-  const bucket = readBucket();
-  bucket.push(evt);
-  trimBucket(bucket);
-  writeBucket(bucket);
+  return target === participantId;
 }
 
 export function takeReplayMessagesForParticipant(
   participantId: string,
 ): PlatformMessageEvent[] {
-  const bucket = readBucket();
-  const remaining: unknown[] = [];
-  const taken: PlatformMessageEvent[] = [];
-  for (const item of bucket) {
-    const parsed = platformMessageEventSchema.safeParse(item);
-    if (!parsed.success) {
-      continue;
-    }
-    const evt = parsed.data;
-    if (isBroadcastEvent(evt)) {
-      remaining.push(item);
-      continue;
-    }
-    if (evt.target === participantId) {
-      taken.push(evt);
-    } else {
-      remaining.push(item);
-    }
-  }
-  writeBucket(remaining);
-  return taken;
+  const store = readStore();
+  const matching = store.filter((m) => messageMatchesParticipant(m, participantId));
+  const remaining = store.filter((m) => !messageMatchesParticipant(m, participantId));
+  writeStore(remaining);
+  return matching;
 }
 
 export function peekReplayMessagesForParticipant(
   participantId: string,
 ): PlatformMessageEvent[] {
-  const bucket = readBucket();
-  const out: PlatformMessageEvent[] = [];
-  for (const item of bucket) {
-    const parsed = platformMessageEventSchema.safeParse(item);
-    if (!parsed.success) {
-      continue;
-    }
-    const evt = parsed.data;
-    if (isBroadcastEvent(evt) || evt.target === participantId) {
-      out.push(evt);
-    }
-  }
-  return out;
+  return readStore().filter((m) => messageMatchesParticipant(m, participantId));
 }

@@ -8,14 +8,15 @@
             <h3 class="header-title">Angular Nx Micro-frontend App PoC.</h3>
             <sub class="header-sub">propose by L.Kővári</sub>
         </div>
-        <div class="header-toolbar flex min-w-0 flex-1 flex-nowrap items-center justify-end gap-2 sm:gap-4">
+        <div class="header-toolbar flex min-w-0 flex-1 flex-wrap items-center justify-end gap-2 sm:gap-4">
             <nav class="header-nav min-w-0 flex-1">
                 <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
                 <a routerLink="/mf_remote_a" routerLinkActive="active">Remote <span class="text-green-500">A</span></a>
                 <a routerLink="/mf_remote_b" routerLinkActive="active">Remote <span class="text-blue-500">B</span></a>
                 <a routerLink="/mf_remote_c" routerLinkActive="active">Remote <span class="text-orange-500">C</span></a>
             </nav>
-            <div class="header-messaging flex shrink-0 items-center border-l border-slate-500/60 pl-2 sm:pl-4">
+            <div class="header-messaging shrink-0 border-l border-slate-500/60 pl-2 sm:pl-4">
+                <lib-demo-shell-h2r-query-suite />
                 <lib-platform-messaging-trigger [participantId]="composerParticipantId()"></lib-platform-messaging-trigger>
             </div>
             </div>
