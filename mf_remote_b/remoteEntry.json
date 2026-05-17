@@ -3,7 +3,7 @@
   "shared": [
     {
       "packageName": "@angular/common",
-      "outFileName": "_angular_common.wJq1h1egq1.js",
+      "outFileName": "_angular_common.STuDMZHdA7.js",
       "requiredVersion": "~21.2.0",
       "singleton": true,
       "strictVersion": true,
@@ -11,7 +11,7 @@
     },
     {
       "packageName": "@angular/common/http",
-      "outFileName": "_angular_common_http.hPIwCNHG5T.js",
+      "outFileName": "_angular_common_http.1yYIDBcxK9.js",
       "requiredVersion": "~21.2.0",
       "singleton": true,
       "strictVersion": true,
@@ -19,7 +19,7 @@
     },
     {
       "packageName": "@angular/core",
-      "outFileName": "_angular_core.SFBg6PsUOE.js",
+      "outFileName": "_angular_core.A4PhqaVtvz.js",
       "requiredVersion": "~21.2.0",
       "singleton": true,
       "strictVersion": true,
@@ -27,7 +27,7 @@
     },
     {
       "packageName": "@angular/core/primitives/di",
-      "outFileName": "_angular_core_primitives_di.4I6xpNTpbB.js",
+      "outFileName": "_angular_core_primitives_di.sjKV0Q-J_G.js",
       "requiredVersion": "~21.2.0",
       "singleton": true,
       "strictVersion": true,
@@ -35,7 +35,7 @@
     },
     {
       "packageName": "@angular/core/primitives/signals",
-      "outFileName": "_angular_core_primitives_signals.wSOHTeJDts.js",
+      "outFileName": "_angular_core_primitives_signals.e8lcwDX8qS.js",
       "requiredVersion": "~21.2.0",
       "singleton": true,
       "strictVersion": true,
@@ -43,7 +43,7 @@
     },
     {
       "packageName": "@angular/core/rxjs-interop",
-      "outFileName": "_angular_core_rxjs_interop.N8iUICSdjc.js",
+      "outFileName": "_angular_core_rxjs_interop.z-h_AwfdKG.js",
       "requiredVersion": "~21.2.0",
       "singleton": true,
       "strictVersion": true,
@@ -51,7 +51,7 @@
     },
     {
       "packageName": "@angular/forms",
-      "outFileName": "_angular_forms.4t8u4wl3O0.js",
+      "outFileName": "_angular_forms.7P36-Ys8Vh.js",
       "requiredVersion": "~21.2.0",
       "singleton": true,
       "strictVersion": true,
@@ -59,7 +59,7 @@
     },
     {
       "packageName": "@angular/platform-browser",
-      "outFileName": "_angular_platform_browser.ccZEfJ-15t.js",
+      "outFileName": "_angular_platform_browser.X77delDEcv.js",
       "requiredVersion": "~21.2.0",
       "singleton": true,
       "strictVersion": true,
@@ -67,7 +67,7 @@
     },
     {
       "packageName": "@angular/platform-browser/animations/async",
-      "outFileName": "_angular_platform_browser_animations_async.1ecUc7pQTA.js",
+      "outFileName": "_angular_platform_browser_animations_async.NwFH9brk-J.js",
       "requiredVersion": "~21.2.0",
       "singleton": true,
       "strictVersion": true,
@@ -75,7 +75,7 @@
     },
     {
       "packageName": "@angular/router",
-      "outFileName": "_angular_router.ucYXGTdN1G.js",
+      "outFileName": "_angular_router.ZGWKWHo7Un.js",
       "requiredVersion": "~21.2.0",
       "singleton": true,
       "strictVersion": true,
@@ -83,7 +83,7 @@
     },
     {
       "packageName": "@lkovari/microfrontend-platform-communication/contracts",
-      "outFileName": "_lkovari_microfrontend_platform_communication_contracts.WtFzHU5tEs.js",
+      "outFileName": "_lkovari_microfrontend_platform_communication_contracts.JsEql60ool.js",
       "requiredVersion": "^0.1.4",
       "singleton": true,
       "strictVersion": true,
@@ -91,7 +91,7 @@
     },
     {
       "packageName": "@lkovari/microfrontend-platform-communication/schemas",
-      "outFileName": "_lkovari_microfrontend_platform_communication_schemas.JhFYRDsdCO.js",
+      "outFileName": "_lkovari_microfrontend_platform_communication_schemas.CJ9OA8B7A7.js",
       "requiredVersion": "^0.1.4",
       "singleton": true,
       "strictVersion": true,
@@ -99,7 +99,7 @@
     },
     {
       "packageName": "@lkovari/microfrontend-platform-communication/core",
-      "outFileName": "_lkovari_microfrontend_platform_communication_core.-HiH9TO01M.js",
+      "outFileName": "_lkovari_microfrontend_platform_communication_core.aAfq2OFN23.js",
       "requiredVersion": "^0.1.4",
       "singleton": true,
       "strictVersion": true,
@@ -107,7 +107,7 @@
     },
     {
       "packageName": "@lkovari/microfrontend-platform-communication/angular",
-      "outFileName": "_lkovari_microfrontend_platform_communication_angular.DQDJbYiiM-.js",
+      "outFileName": "_lkovari_microfrontend_platform_communication_angular.kZt4ugyIEs.js",
       "requiredVersion": "^0.1.4",
       "singleton": true,
       "strictVersion": true,
@@ -115,7 +115,7 @@
     },
     {
       "packageName": "primeng/api",
-      "outFileName": "primeng_api._bspcXj8hL.js",
+      "outFileName": "primeng_api._BQ3JRT8-K.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -123,7 +123,7 @@
     },
     {
       "packageName": "primeng/autofocus",
-      "outFileName": "primeng_autofocus.lWfaNH_MPv.js",
+      "outFileName": "primeng_autofocus.po38ZEHEh2.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -131,7 +131,7 @@
     },
     {
       "packageName": "primeng/badge",
-      "outFileName": "primeng_badge.fuztr44VCQ.js",
+      "outFileName": "primeng_badge.D_0yf186L6.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -139,7 +139,7 @@
     },
     {
       "packageName": "primeng/base",
-      "outFileName": "primeng_base.8UGPftEToF.js",
+      "outFileName": "primeng_base.ab5hbYROrd.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -147,7 +147,7 @@
     },
     {
       "packageName": "primeng/basecomponent",
-      "outFileName": "primeng_basecomponent.pkqjuajbVJ.js",
+      "outFileName": "primeng_basecomponent.3pVgLVsyUh.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -155,7 +155,7 @@
     },
     {
       "packageName": "primeng/baseeditableholder",
-      "outFileName": "primeng_baseeditableholder.MAvJ0DKYM9.js",
+      "outFileName": "primeng_baseeditableholder.2IS5r8wW6d.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -163,7 +163,7 @@
     },
     {
       "packageName": "primeng/baseinput",
-      "outFileName": "primeng_baseinput.aRzLKKIFZd.js",
+      "outFileName": "primeng_baseinput.VCwhd8byjm.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -171,7 +171,7 @@
     },
     {
       "packageName": "primeng/basemodelholder",
-      "outFileName": "primeng_basemodelholder.NI5N5ob_an.js",
+      "outFileName": "primeng_basemodelholder.IAfXlAU4B6.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -179,7 +179,7 @@
     },
     {
       "packageName": "primeng/bind",
-      "outFileName": "primeng_bind.GSmqYf-jym.js",
+      "outFileName": "primeng_bind.kpyIbW8mde.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -187,7 +187,7 @@
     },
     {
       "packageName": "primeng/button",
-      "outFileName": "primeng_button.4RMTQJoetg.js",
+      "outFileName": "primeng_button.JTpLyHo0iE.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -195,7 +195,7 @@
     },
     {
       "packageName": "primeng/config",
-      "outFileName": "primeng_config.YIUrvI3Y_N.js",
+      "outFileName": "primeng_config.33F1mO5kTS.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -203,7 +203,7 @@
     },
     {
       "packageName": "primeng/dialog",
-      "outFileName": "primeng_dialog.n1ApXAf36u.js",
+      "outFileName": "primeng_dialog.QkhqwoPewU.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -211,7 +211,7 @@
     },
     {
       "packageName": "primeng/dom",
-      "outFileName": "primeng_dom.DzQLecwjPf.js",
+      "outFileName": "primeng_dom.XHoNkHwz7m.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -219,7 +219,7 @@
     },
     {
       "packageName": "primeng/fluid",
-      "outFileName": "primeng_fluid.kB3TBaux05.js",
+      "outFileName": "primeng_fluid.OYjQcD3Tny.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -227,7 +227,7 @@
     },
     {
       "packageName": "primeng/focustrap",
-      "outFileName": "primeng_focustrap.bLPR-3d-ZF.js",
+      "outFileName": "primeng_focustrap.WDWZThsJYe.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -235,7 +235,7 @@
     },
     {
       "packageName": "primeng/iconfield",
-      "outFileName": "primeng_iconfield.DslVviZwUN.js",
+      "outFileName": "primeng_iconfield.qUylp16y2H.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -243,7 +243,7 @@
     },
     {
       "packageName": "primeng/icons",
-      "outFileName": "primeng_icons.SnQNKzjVBb.js",
+      "outFileName": "primeng_icons.HaWXDBpdvi.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -251,7 +251,7 @@
     },
     {
       "packageName": "primeng/icons/angledoubledown",
-      "outFileName": "primeng_icons_angledoubledown.wn8bWwgg1i.js",
+      "outFileName": "primeng_icons_angledoubledown.1eE9PuOHos.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -259,7 +259,7 @@
     },
     {
       "packageName": "primeng/icons/angledoubleleft",
-      "outFileName": "primeng_icons_angledoubleleft.Ywr6yoVUzU.js",
+      "outFileName": "primeng_icons_angledoubleleft.0q8SRvBJpz.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -267,7 +267,7 @@
     },
     {
       "packageName": "primeng/icons/angledoubleright",
-      "outFileName": "primeng_icons_angledoubleright.6KBvIEEkzr.js",
+      "outFileName": "primeng_icons_angledoubleright.7x6dRo-Bas.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -275,7 +275,7 @@
     },
     {
       "packageName": "primeng/icons/angledoubleup",
-      "outFileName": "primeng_icons_angledoubleup.yqwE2oT3Wo.js",
+      "outFileName": "primeng_icons_angledoubleup.ucmFZhhk6C.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -283,7 +283,7 @@
     },
     {
       "packageName": "primeng/icons/angledown",
-      "outFileName": "primeng_icons_angledown.-31q048Lws.js",
+      "outFileName": "primeng_icons_angledown.UZKKkid8Z2.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -291,7 +291,7 @@
     },
     {
       "packageName": "primeng/icons/angleleft",
-      "outFileName": "primeng_icons_angleleft.4ixREgccms.js",
+      "outFileName": "primeng_icons_angleleft.87EN51jkGA.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -299,7 +299,7 @@
     },
     {
       "packageName": "primeng/icons/angleright",
-      "outFileName": "primeng_icons_angleright.olwK_ZfxbE.js",
+      "outFileName": "primeng_icons_angleright.Lo_atv41PE.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -307,7 +307,7 @@
     },
     {
       "packageName": "primeng/icons/angleup",
-      "outFileName": "primeng_icons_angleup.ux4YBZx7mY.js",
+      "outFileName": "primeng_icons_angleup.iYYiZUSTr_.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -315,7 +315,7 @@
     },
     {
       "packageName": "primeng/icons/arrowdown",
-      "outFileName": "primeng_icons_arrowdown.Jxcfmd3s-f.js",
+      "outFileName": "primeng_icons_arrowdown.X1L22aRBrR.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -323,7 +323,7 @@
     },
     {
       "packageName": "primeng/icons/arrowdownleft",
-      "outFileName": "primeng_icons_arrowdownleft.VutdQMmeTz.js",
+      "outFileName": "primeng_icons_arrowdownleft.IWbasWEDuF.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -331,7 +331,7 @@
     },
     {
       "packageName": "primeng/icons/arrowdownright",
-      "outFileName": "primeng_icons_arrowdownright.RDE4dAhPCK.js",
+      "outFileName": "primeng_icons_arrowdownright.qbuZW4UR1k.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -339,7 +339,7 @@
     },
     {
       "packageName": "primeng/icons/arrowleft",
-      "outFileName": "primeng_icons_arrowleft.x_R9XhXH62.js",
+      "outFileName": "primeng_icons_arrowleft.H2NKWIDj6d.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -347,7 +347,7 @@
     },
     {
       "packageName": "primeng/icons/arrowright",
-      "outFileName": "primeng_icons_arrowright.oN0yp-I6qs.js",
+      "outFileName": "primeng_icons_arrowright.JTsCjtgeEH.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -355,7 +355,7 @@
     },
     {
       "packageName": "primeng/icons/arrowup",
-      "outFileName": "primeng_icons_arrowup.rD7mUVvHlv.js",
+      "outFileName": "primeng_icons_arrowup.szGh_0nUUn.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -363,7 +363,7 @@
     },
     {
       "packageName": "primeng/icons/ban",
-      "outFileName": "primeng_icons_ban.S1VEqhp5ZM.js",
+      "outFileName": "primeng_icons_ban.6AB4q7oUgs.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -371,7 +371,7 @@
     },
     {
       "packageName": "primeng/icons/bars",
-      "outFileName": "primeng_icons_bars.zR3QHXUUpo.js",
+      "outFileName": "primeng_icons_bars.9j5N7ejBpe.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -379,7 +379,7 @@
     },
     {
       "packageName": "primeng/icons/baseicon",
-      "outFileName": "primeng_icons_baseicon.Ork6H2asqW.js",
+      "outFileName": "primeng_icons_baseicon.xgAcNR5Oou.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -387,7 +387,7 @@
     },
     {
       "packageName": "primeng/icons/blank",
-      "outFileName": "primeng_icons_blank.Nx2KJs9McI.js",
+      "outFileName": "primeng_icons_blank.xoqs_bm9iJ.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -395,7 +395,7 @@
     },
     {
       "packageName": "primeng/icons/calendar",
-      "outFileName": "primeng_icons_calendar.fSpkwLPXpb.js",
+      "outFileName": "primeng_icons_calendar.j6I5_fXd9i.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -403,7 +403,7 @@
     },
     {
       "packageName": "primeng/icons/caretleft",
-      "outFileName": "primeng_icons_caretleft.vcJq-QFJKh.js",
+      "outFileName": "primeng_icons_caretleft.BSKDjWM6j9.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -411,7 +411,7 @@
     },
     {
       "packageName": "primeng/icons/caretright",
-      "outFileName": "primeng_icons_caretright.SNUnJ_9BsL.js",
+      "outFileName": "primeng_icons_caretright.9g_Apmv8x2.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -419,7 +419,7 @@
     },
     {
       "packageName": "primeng/icons/check",
-      "outFileName": "primeng_icons_check.S6TworBuJV.js",
+      "outFileName": "primeng_icons_check.dvTUEpXneD.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -427,7 +427,7 @@
     },
     {
       "packageName": "primeng/icons/chevrondown",
-      "outFileName": "primeng_icons_chevrondown.hvtDSWdEdV.js",
+      "outFileName": "primeng_icons_chevrondown.rYteRiqCXd.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -435,7 +435,7 @@
     },
     {
       "packageName": "primeng/icons/chevronleft",
-      "outFileName": "primeng_icons_chevronleft.m0H5bHmeTy.js",
+      "outFileName": "primeng_icons_chevronleft.TZkCKUAQE2.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -443,7 +443,7 @@
     },
     {
       "packageName": "primeng/icons/chevronright",
-      "outFileName": "primeng_icons_chevronright.vksx6gkpIN.js",
+      "outFileName": "primeng_icons_chevronright.r8ZU209Dah.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -451,7 +451,7 @@
     },
     {
       "packageName": "primeng/icons/chevronup",
-      "outFileName": "primeng_icons_chevronup.xHD8bebEmW.js",
+      "outFileName": "primeng_icons_chevronup.HdVc2_w413.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -459,7 +459,7 @@
     },
     {
       "packageName": "primeng/icons/exclamationtriangle",
-      "outFileName": "primeng_icons_exclamationtriangle.mO5urLCj0B.js",
+      "outFileName": "primeng_icons_exclamationtriangle.VwWjFPXIuc.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -467,7 +467,7 @@
     },
     {
       "packageName": "primeng/icons/eye",
-      "outFileName": "primeng_icons_eye.iUGefKm6Yw.js",
+      "outFileName": "primeng_icons_eye.ONl4QCdoG7.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -475,7 +475,7 @@
     },
     {
       "packageName": "primeng/icons/eyeslash",
-      "outFileName": "primeng_icons_eyeslash.CPRo7BBEDa.js",
+      "outFileName": "primeng_icons_eyeslash.HartHM3tlW.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -483,7 +483,7 @@
     },
     {
       "packageName": "primeng/icons/filter",
-      "outFileName": "primeng_icons_filter.VlEV5_Fdnd.js",
+      "outFileName": "primeng_icons_filter.tCa8n22VJ0.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -491,7 +491,7 @@
     },
     {
       "packageName": "primeng/icons/filterslash",
-      "outFileName": "primeng_icons_filterslash.TxxIV5pQVm.js",
+      "outFileName": "primeng_icons_filterslash.qvC9czGdeT.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -499,7 +499,7 @@
     },
     {
       "packageName": "primeng/icons/home",
-      "outFileName": "primeng_icons_home.Hnvm0wwXdy.js",
+      "outFileName": "primeng_icons_home.S-SPAQ2YG7.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -507,7 +507,7 @@
     },
     {
       "packageName": "primeng/icons/infocircle",
-      "outFileName": "primeng_icons_infocircle.AlqksPCnhQ.js",
+      "outFileName": "primeng_icons_infocircle.h-jd842wZr.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -515,7 +515,7 @@
     },
     {
       "packageName": "primeng/icons/minus",
-      "outFileName": "primeng_icons_minus.Rt6Rdr1q-o.js",
+      "outFileName": "primeng_icons_minus.JX_OybcQPV.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -523,7 +523,7 @@
     },
     {
       "packageName": "primeng/icons/pencil",
-      "outFileName": "primeng_icons_pencil.NWyWdk_N0-.js",
+      "outFileName": "primeng_icons_pencil.aILyKMXVlp.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -531,7 +531,7 @@
     },
     {
       "packageName": "primeng/icons/plus",
-      "outFileName": "primeng_icons_plus.mQoMfh3ZJM.js",
+      "outFileName": "primeng_icons_plus.0u9eH4uDRu.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -539,7 +539,7 @@
     },
     {
       "packageName": "primeng/icons/refresh",
-      "outFileName": "primeng_icons_refresh.id_Z5_-VLN.js",
+      "outFileName": "primeng_icons_refresh.m5hrneHDDC.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -547,7 +547,7 @@
     },
     {
       "packageName": "primeng/icons/search",
-      "outFileName": "primeng_icons_search.uVUtRHhuRP.js",
+      "outFileName": "primeng_icons_search.bpeuLX0ZV8.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -555,7 +555,7 @@
     },
     {
       "packageName": "primeng/icons/searchminus",
-      "outFileName": "primeng_icons_searchminus.Vl9QFgy-wc.js",
+      "outFileName": "primeng_icons_searchminus.5WEruGLJu_.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -563,7 +563,7 @@
     },
     {
       "packageName": "primeng/icons/searchplus",
-      "outFileName": "primeng_icons_searchplus.OSMblG5uU4.js",
+      "outFileName": "primeng_icons_searchplus.H-7uhtLhUg.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -571,7 +571,7 @@
     },
     {
       "packageName": "primeng/icons/sortalt",
-      "outFileName": "primeng_icons_sortalt.Sx05h8LuME.js",
+      "outFileName": "primeng_icons_sortalt.1ug3JpKn41.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -579,7 +579,7 @@
     },
     {
       "packageName": "primeng/icons/sortamountdown",
-      "outFileName": "primeng_icons_sortamountdown.hYZdl472jk.js",
+      "outFileName": "primeng_icons_sortamountdown.aQIwp5jLnH.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -587,7 +587,7 @@
     },
     {
       "packageName": "primeng/icons/sortamountupalt",
-      "outFileName": "primeng_icons_sortamountupalt.yBsEnE-rZd.js",
+      "outFileName": "primeng_icons_sortamountupalt.6sPzud3iLg.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -595,7 +595,7 @@
     },
     {
       "packageName": "primeng/icons/spinner",
-      "outFileName": "primeng_icons_spinner.ePZ6ksFaJI.js",
+      "outFileName": "primeng_icons_spinner.fr1to8ID4r.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -603,7 +603,7 @@
     },
     {
       "packageName": "primeng/icons/star",
-      "outFileName": "primeng_icons_star.lmiOwSWxQg.js",
+      "outFileName": "primeng_icons_star.OxN5PWWHQA.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -611,7 +611,7 @@
     },
     {
       "packageName": "primeng/icons/starfill",
-      "outFileName": "primeng_icons_starfill.2KnfjmDelx.js",
+      "outFileName": "primeng_icons_starfill.kOGSB99obc.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -619,7 +619,7 @@
     },
     {
       "packageName": "primeng/icons/thlarge",
-      "outFileName": "primeng_icons_thlarge.DGpctFuVML.js",
+      "outFileName": "primeng_icons_thlarge.Z7zy05lJv3.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -627,7 +627,7 @@
     },
     {
       "packageName": "primeng/icons/times",
-      "outFileName": "primeng_icons_times.DeFBjzjscc.js",
+      "outFileName": "primeng_icons_times.cg9n3FFd13.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -635,7 +635,7 @@
     },
     {
       "packageName": "primeng/icons/timescircle",
-      "outFileName": "primeng_icons_timescircle.qPbJchfSH9.js",
+      "outFileName": "primeng_icons_timescircle.yx6vfUfRor.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -643,7 +643,7 @@
     },
     {
       "packageName": "primeng/icons/trash",
-      "outFileName": "primeng_icons_trash.BhUD5ukWqr.js",
+      "outFileName": "primeng_icons_trash.r8r9dBNXYQ.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -651,7 +651,7 @@
     },
     {
       "packageName": "primeng/icons/undo",
-      "outFileName": "primeng_icons_undo.jmPMxAkjmP.js",
+      "outFileName": "primeng_icons_undo.NMjo_br2Gf.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -659,7 +659,7 @@
     },
     {
       "packageName": "primeng/icons/upload",
-      "outFileName": "primeng_icons_upload.wBoLDnC9hK.js",
+      "outFileName": "primeng_icons_upload.UCQfpVBh61.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -667,7 +667,7 @@
     },
     {
       "packageName": "primeng/icons/windowmaximize",
-      "outFileName": "primeng_icons_windowmaximize.8BPtN1qgYv.js",
+      "outFileName": "primeng_icons_windowmaximize.cZSGGnpwSr.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -675,7 +675,7 @@
     },
     {
       "packageName": "primeng/icons/windowminimize",
-      "outFileName": "primeng_icons_windowminimize.QqLRlDxg6T.js",
+      "outFileName": "primeng_icons_windowminimize.QqSSY6Mmhz.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -683,7 +683,7 @@
     },
     {
       "packageName": "primeng/inputicon",
-      "outFileName": "primeng_inputicon.S29rjgCnxU.js",
+      "outFileName": "primeng_inputicon.vWZl7EUQpA.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -691,7 +691,7 @@
     },
     {
       "packageName": "primeng/inputtext",
-      "outFileName": "primeng_inputtext.Ts1ctWgCpv.js",
+      "outFileName": "primeng_inputtext.bF6gdDoprp.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -699,7 +699,7 @@
     },
     {
       "packageName": "primeng/motion",
-      "outFileName": "primeng_motion.PM0XMOViV5.js",
+      "outFileName": "primeng_motion.9yhN4kyamm.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -707,7 +707,7 @@
     },
     {
       "packageName": "primeng/overlay",
-      "outFileName": "primeng_overlay.bswwkGBjLS.js",
+      "outFileName": "primeng_overlay.mnYysIt9ob.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -715,7 +715,7 @@
     },
     {
       "packageName": "primeng/ripple",
-      "outFileName": "primeng_ripple.EzFOfqsKRc.js",
+      "outFileName": "primeng_ripple.uyg5_lkalT.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -723,7 +723,7 @@
     },
     {
       "packageName": "primeng/scroller",
-      "outFileName": "primeng_scroller.j74OGJcUbn.js",
+      "outFileName": "primeng_scroller.2QWfdz47rz.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -731,7 +731,7 @@
     },
     {
       "packageName": "primeng/select",
-      "outFileName": "primeng_select.UGOEmJyISQ.js",
+      "outFileName": "primeng_select.vDCw6VO5RF.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -739,7 +739,7 @@
     },
     {
       "packageName": "primeng/textarea",
-      "outFileName": "primeng_textarea._lN4wX_1Ul.js",
+      "outFileName": "primeng_textarea.MtdRaR9ZXv.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -747,7 +747,7 @@
     },
     {
       "packageName": "primeng/toast",
-      "outFileName": "primeng_toast.fRdDOCdCb9.js",
+      "outFileName": "primeng_toast.0VOeSFAD_A.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -755,7 +755,7 @@
     },
     {
       "packageName": "primeng/tooltip",
-      "outFileName": "primeng_tooltip.4ZFhvbVCCh.js",
+      "outFileName": "primeng_tooltip.-NhUdvRFWI.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -763,7 +763,7 @@
     },
     {
       "packageName": "primeng/types/button",
-      "outFileName": "primeng_types_button.oZR6fPoGER.js",
+      "outFileName": "primeng_types_button.o2_vh4Lezb.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -771,7 +771,7 @@
     },
     {
       "packageName": "primeng/types/dialog",
-      "outFileName": "primeng_types_dialog.ASTPuNVAhc.js",
+      "outFileName": "primeng_types_dialog.Hpi9muTmd0.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -779,7 +779,7 @@
     },
     {
       "packageName": "primeng/types/fluid",
-      "outFileName": "primeng_types_fluid.mR1mEGCXcZ.js",
+      "outFileName": "primeng_types_fluid.I_lcRPT4-z.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -787,7 +787,7 @@
     },
     {
       "packageName": "primeng/types/scroller",
-      "outFileName": "primeng_types_scroller.a4WnznOMsd.js",
+      "outFileName": "primeng_types_scroller.q9fc4CKLVS.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -795,7 +795,7 @@
     },
     {
       "packageName": "primeng/types/select",
-      "outFileName": "primeng_types_select.0snjf4cDeS.js",
+      "outFileName": "primeng_types_select.ZogVrbIz8v.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -803,7 +803,7 @@
     },
     {
       "packageName": "primeng/types/toast",
-      "outFileName": "primeng_types_toast.AdlF6PnpQr.js",
+      "outFileName": "primeng_types_toast.N1zcvMpLF1.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -811,7 +811,7 @@
     },
     {
       "packageName": "primeng/usestyle",
-      "outFileName": "primeng_usestyle.Ln9liHrSi9.js",
+      "outFileName": "primeng_usestyle.GYf_Mx8deK.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -819,7 +819,7 @@
     },
     {
       "packageName": "primeng/utils",
-      "outFileName": "primeng_utils.GLWDIRfvr9.js",
+      "outFileName": "primeng_utils.P6ojZNTpTJ.js",
       "requiredVersion": "^21.1.6",
       "singleton": true,
       "strictVersion": true,
@@ -827,7 +827,7 @@
     },
     {
       "packageName": "rxjs",
-      "outFileName": "rxjs.wCJbSqlcp1.js",
+      "outFileName": "rxjs.NjN-tZqgmP.js",
       "requiredVersion": "~7.8.0",
       "singleton": true,
       "strictVersion": true,
@@ -835,7 +835,7 @@
     },
     {
       "packageName": "rxjs/operators",
-      "outFileName": "rxjs_operators.RT4lQvRCcn.js",
+      "outFileName": "rxjs_operators.mnNVHW9S34.js",
       "requiredVersion": "~7.8.0",
       "singleton": true,
       "strictVersion": true,
@@ -843,7 +843,7 @@
     },
     {
       "packageName": "zod",
-      "outFileName": "zod.g2fqk-FEBb.js",
+      "outFileName": "zod.NSWnyim6b5.js",
       "requiredVersion": "^3.25.76",
       "singleton": true,
       "strictVersion": true,
@@ -979,7 +979,15 @@
     },
     {
       "packageName": "@nx-mf-df/common-ui-lib",
-      "outFileName": "_nx_mf_df_common_ui_lib-CCX7QO3E.js",
+      "outFileName": "_nx_mf_df_common_ui_lib-GQSID2FJ.js",
+      "requiredVersion": "",
+      "singleton": true,
+      "strictVersion": false,
+      "version": ""
+    },
+    {
+      "packageName": "@nx-mf-df/contracts-platform-messaging",
+      "outFileName": "_nx_mf_df_contracts_platform_messaging-V7UVXG2R.js",
       "requiredVersion": "",
       "singleton": true,
       "strictVersion": false,
