@@ -282,9 +282,11 @@ Build and lint targets use Nx caching (`nx.json` `targetDefaults`); repeated bui
 
 ---
 
-## Patch for pnpm
+## Platform communication package
 
-After `pnpm install`, pnpm applies `nx-mf-df/patches/@lkovari__microfrontend-platform-communication@0.1.4.patch` so `package.json` `exports` point to existing `.js` files instead of missing `.mjs` entrypoints.
+`@lkovari/microfrontend-platform-communication` is pinned at **^0.2.1** in `nx-mf-df/package.json`. A pnpm patch rewrites `package.json` `exports` from `.mjs` to `.js` so Native Federation can resolve the published `dist` files (see `nx-mf-df/patches/`).
+
+See [`CHANGELOG-2026-05-24.md`](CHANGELOG-2026-05-24.md) for upgrade notes.
 
 ---
 

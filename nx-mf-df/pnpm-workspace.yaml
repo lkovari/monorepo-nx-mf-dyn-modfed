@@ -1,4 +1,4 @@
 autoInstallPeers: true
 
 patchedDependencies:
-  '@lkovari/microfrontend-platform-communication@0.1.4': patches/@lkovari__microfrontend-platform-communication@0.1.4.patch
+  '@lkovari/microfrontend-platform-communication@0.2.1': patches/@lkovari__microfrontend-platform-communication@0.2.1.patch

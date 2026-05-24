@@ -1,4 +1,7 @@
-import type { PlatformMessageEvent } from '@nx-mf-df/contracts-platform-messaging';
+import {
+  platformMessageEventSchema,
+  type PlatformMessageEvent,
+} from '@nx-mf-df/contracts-platform-messaging';
 
 const STORAGE_KEY = 'nx-mf-df.platform-message.replay';
 
@@ -15,7 +18,14 @@ function readStore(): PlatformMessageEvent[] {
     if (!Array.isArray(parsed)) {
       return [];
     }
-    return parsed as PlatformMessageEvent[];
+    const messages: PlatformMessageEvent[] = [];
+    for (const item of parsed) {
+      const result = platformMessageEventSchema.safeParse(item);
+      if (result.success) {
+        messages.push(result.data);
+      }
+    }
+    return messages;
   } catch {
     return [];
   }

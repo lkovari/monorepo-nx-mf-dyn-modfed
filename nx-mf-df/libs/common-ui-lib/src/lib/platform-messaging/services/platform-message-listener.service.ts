@@ -68,7 +68,7 @@ export class PlatformMessageListenerService {
 
   readonly history = signal<readonly PlatformMessageHistoryEntry[]>([]);
 
-  private readonly viewingParticipantId = signal(SHELL_HOST_ID);
+  readonly viewingParticipantId = signal(SHELL_HOST_ID);
 
   readonly visibleHistory = computed(() => {
     const pid = this.viewingParticipantId();
