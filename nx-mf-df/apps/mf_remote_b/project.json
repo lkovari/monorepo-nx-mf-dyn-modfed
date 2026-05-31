@@ -36,7 +36,9 @@
     },
     "test": {
       "executor": "@angular/build:unit-test",
-      "options": {}
+      "options": {
+        "buildTarget": "mf_remote_b:esbuild:development"
+      }
     },
     "serve-static": {
       "continuous": true,

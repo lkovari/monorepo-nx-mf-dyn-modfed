@@ -8,6 +8,7 @@ import {
 } from '@angular/core';
 import type { AckResult, MessageBase } from '@lkovari/microfrontend-platform-communication/contracts';
 import type { Bus } from '@lkovari/microfrontend-platform-communication/core';
+import { PLATFORM_BRIDGE_ACCESS_TOKEN } from '@nx-mf-df/contracts-platform-messaging';
 
 import { getUsableWindowBridge } from '../mfe-window-bridge.util';
 
@@ -52,7 +53,7 @@ export class RemotePlatformBusService {
     if (!isPlatformBrowser(this.platformId)) {
       return null;
     }
-    return getUsableWindowBridge()?.getBus() ?? null;
+    return getUsableWindowBridge()?.getBus(PLATFORM_BRIDGE_ACCESS_TOKEN) ?? null;
   }
 
   getHostAppId(): string | null {
@@ -79,6 +80,6 @@ export class RemotePlatformBusService {
     if (!handle) {
       return null;
     }
-    return handle.tryPublish(message);
+    return handle.tryPublish(message, PLATFORM_BRIDGE_ACCESS_TOKEN);
   }
 }

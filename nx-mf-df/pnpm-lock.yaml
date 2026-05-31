@@ -5,9 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 patchedDependencies:
-  '@lkovari/microfrontend-platform-communication@0.2.1':
-    hash: 0db15184db2b1b59e9743a5e79a279ca02dee7a2d17233c2ae32f0ecbdbcf9f0
-    path: patches/@lkovari__microfrontend-platform-communication@0.2.1.patch
+  '@lkovari/microfrontend-platform-communication@0.3.0':
+    hash: 4588f7eae22a2b7d883408ad0268759be915ab18bc1a51b9ae09eb51b6ddf217
+    path: patches/@lkovari__microfrontend-platform-communication@0.3.0.patch
 
 importers:
 
@@ -35,8 +35,8 @@ importers:
         specifier: ~21.2.0
         version: 21.2.6(@angular/common@21.2.6(@angular/core@21.2.6(@angular/compiler@21.2.6)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.6(@angular/compiler@21.2.6)(rxjs@7.8.2))(@angular/platform-browser@21.2.6(@angular/animations@21.2.6(@angular/core@21.2.6(@angular/compiler@21.2.6)(rxjs@7.8.2)))(@angular/common@21.2.6(@angular/core@21.2.6(@angular/compiler@21.2.6)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@21.2.6(@angular/compiler@21.2.6)(rxjs@7.8.2)))(rxjs@7.8.2)
       '@lkovari/microfrontend-platform-communication':
-        specifier: ^0.2.1
-        version: 0.2.1(patch_hash=0db15184db2b1b59e9743a5e79a279ca02dee7a2d17233c2ae32f0ecbdbcf9f0)(@angular/core@21.2.6(@angular/compiler@21.2.6)(rxjs@7.8.2))(rxjs@7.8.2)
+        specifier: ^0.3.0
+        version: 0.3.0(patch_hash=4588f7eae22a2b7d883408ad0268759be915ab18bc1a51b9ae09eb51b6ddf217)(@angular/core@21.2.6(@angular/compiler@21.2.6)(rxjs@7.8.2))(rxjs@7.8.2)
       '@primeuix/themes':
         specifier: ^2.0.3
         version: 2.0.3
@@ -1881,8 +1881,8 @@ packages:
       '@inquirer/prompts': '>= 3 < 8'
       listr2: 9.0.5
 
-  '@lkovari/microfrontend-platform-communication@0.2.1':
-    resolution: {integrity: sha512-Z3CMl6AhFSmD0Q0vag0vxD927QnQtVP4ttCIu058OV9ihGAr67r1QP6f95NYSzil0b+herTGYZJLp+zp4epmpw==}
+  '@lkovari/microfrontend-platform-communication@0.3.0':
+    resolution: {integrity: sha512-Fg2p3VfYO6xyi8UFcFZmJh4MkBMA3gDoYQstutSo9duV5g4Uh+scGRs7vDZSlrdvXcpfyxLsCGfgC0HUdddRig==}
     engines: {node: '>=18.17.0', pnpm: '>=9.0.0'}
     peerDependencies:
       '@angular/core': '>=17.0.0'
@@ -10522,7 +10522,7 @@ snapshots:
     transitivePeerDependencies:
       - '@types/node'
 
-  '@lkovari/microfrontend-platform-communication@0.2.1(patch_hash=0db15184db2b1b59e9743a5e79a279ca02dee7a2d17233c2ae32f0ecbdbcf9f0)(@angular/core@21.2.6(@angular/compiler@21.2.6)(rxjs@7.8.2))(rxjs@7.8.2)':
+  '@lkovari/microfrontend-platform-communication@0.3.0(patch_hash=4588f7eae22a2b7d883408ad0268759be915ab18bc1a51b9ae09eb51b6ddf217)(@angular/core@21.2.6(@angular/compiler@21.2.6)(rxjs@7.8.2))(rxjs@7.8.2)':
     dependencies:
       zod: 3.25.76
     optionalDependencies:

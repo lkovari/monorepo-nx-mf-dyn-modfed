@@ -10,7 +10,9 @@ import {
 import { FormsModule } from '@angular/forms';
 import { BUS_TOKEN } from '@lkovari/microfrontend-platform-communication/angular';
 import {
+  createDemoShellH2rCommand,
   createDemoShellH2rQuery,
+  DEMO_SHELL_H2R_COMMAND,
   DEMO_SHELL_H2R_QUERY,
   demoShellH2rQueryResultSchema,
   MF_REMOTE_A_ID,
@@ -30,6 +32,8 @@ import {
 } from '../services/demo-query-queue.service';
 
 const REQUEST_TIMEOUT_MS = 120_000;
+
+const COMMAND_ACK_TIMEOUT_MS = 5_000;
 
 @Component({
   selector: 'lib-demo-shell-h2r-query-suite',
@@ -64,6 +68,7 @@ export class DemoShellH2rQuerySuiteComponent {
 
   protected readonly requestDialogOpen = signal(false);
   protected readonly sendingQuery = signal(false);
+  protected readonly sendingCommand = signal(false);
 
   protected readonly responsePrompt = this.queue.responsePrompt;
   protected readonly queueDialogOpen = this.queue.queueDialogOpen;
@@ -142,7 +147,7 @@ export class DemoShellH2rQuerySuiteComponent {
     });
     this.queue.recordOutgoing(req);
     void bus
-      .request(req, REQUEST_TIMEOUT_MS, demoShellH2rQueryResultSchema)
+      .request(req, undefined, demoShellH2rQueryResultSchema)
       .then((res) => {
         const parsed = demoShellH2rQueryResultSchema.safeParse(res);
         if (!parsed.success) {
@@ -169,6 +174,51 @@ export class DemoShellH2rQuerySuiteComponent {
       })
       .finally(() => {
         this.sendingQuery.set(false);
+      });
+  }
+
+  protected canSendCommand(): boolean {
+    return (
+      this.bridgeAvailable() &&
+      this.selectedTarget.length > 0 &&
+      !this.sendingCommand()
+    );
+  }
+
+  protected sendCommand(): void {
+    const bus = this.bus;
+    const target = this.selectedTarget;
+    if (!bus || !target || !this.bridgeAvailable() || this.sendingCommand()) {
+      return;
+    }
+    this.sendingCommand.set(true);
+    const command = createDemoShellH2rCommand({
+      source: SHELL_HOST_ID,
+      target,
+      payload: { action: 'demo.refresh' },
+      ackTimeoutMs: COMMAND_ACK_TIMEOUT_MS,
+    });
+    void bus
+      .sendCommand(command)
+      .then((ack) => {
+        if (ack.accepted) {
+          this.messages.add({
+            severity: 'success',
+            summary: DEMO_SHELL_H2R_COMMAND,
+            detail: `${target} acknowledged the command`,
+            life: 6000,
+          });
+          return;
+        }
+        this.messages.add({
+          severity: 'error',
+          summary: 'Command not acknowledged',
+          detail: ack.message,
+          life: 8000,
+        });
+      })
+      .finally(() => {
+        this.sendingCommand.set(false);
       });
   }
 

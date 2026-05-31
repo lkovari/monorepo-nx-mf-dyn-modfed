@@ -20,6 +20,23 @@
     size="small"
     severity="secondary"
     styleClass="c-demo-query-suite__btn"
+    [disabled]="!canSendCommand()"
+    [loading]="sendingCommand()"
+    (onClick)="sendCommand()"
+    ariaLabel="Send demo command"
+  >
+    <span class="c-demo-query-suite__btn-label c-demo-query-suite__btn-label--long"
+      >Demo command</span
+    >
+    <span class="c-demo-query-suite__btn-label c-demo-query-suite__btn-label--short"
+      >Command</span
+    >
+  </p-button>
+  <p-button
+    type="button"
+    size="small"
+    severity="secondary"
+    styleClass="c-demo-query-suite__btn"
     [outlined]="true"
     (onClick)="openQueueDialog()"
     ariaLabel="Open demo queue"

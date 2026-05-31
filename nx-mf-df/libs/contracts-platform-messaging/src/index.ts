@@ -1,4 +1,5 @@
 export * from './lib/participant-ids';
+export * from './lib/platform-bridge-access-token';
 export * from './lib/platform-message/message-names';
 export * from './lib/platform-message/platform-message.schema';
 export * from './lib/platform-message/platform-message.factory';
@@ -7,3 +8,6 @@ export * from './lib/feature-handler.template';
 export * from './lib/demo-shell-h2r-query/message-names';
 export * from './lib/demo-shell-h2r-query/demo-shell-h2r-query.schema';
 export * from './lib/demo-shell-h2r-query/demo-shell-h2r-query.factory';
+export * from './lib/demo-shell-h2r-command/message-names';
+export * from './lib/demo-shell-h2r-command/demo-shell-h2r-command.schema';
+export * from './lib/demo-shell-h2r-command/demo-shell-h2r-command.factory';

@@ -1,7 +1,10 @@
 import type { Sensitivity } from '@lkovari/microfrontend-platform-communication/contracts';
 
 import type { DemoShellH2rQuery } from './demo-shell-h2r-query.schema';
-import { DEMO_SHELL_H2R_QUERY } from './message-names';
+import {
+  DEMO_SHELL_H2R_QUERY,
+  DEMO_SHELL_H2R_QUERY_RESULT,
+} from './message-names';
 
 export interface CreateDemoShellH2rQueryInput {
   readonly source: string;
@@ -24,6 +27,7 @@ export function createDemoShellH2rQuery(
     occurredAtUtc: new Date().toISOString(),
     kind: 'query',
     queryName: 'demo.shell.h2r.query',
+    expectedResult: DEMO_SHELL_H2R_QUERY_RESULT,
     sensitivity: input.sensitivity ?? 'public',
     payload: input.payload,
   };

@@ -14,6 +14,7 @@ export const demoShellH2rQuerySchema = QueryMessageSchema.extend({
   messageVersion: z.literal(1),
   kind: z.literal('query'),
   queryName: z.literal('demo.shell.h2r.query'),
+  expectedResult: z.literal(DEMO_SHELL_H2R_QUERY_RESULT),
   payload: z.object({ q: z.string().min(1) }),
 });
 

@@ -7,13 +7,17 @@ export * from './lib/primeng/workspace-primeng';
 
 export {
   ALL_PARTICIPANT_IDS,
+  createDemoShellH2rCommand,
   createPlatformEventMessage,
   createPlatformMessagingTopicRegistry,
+  DEMO_SHELL_H2R_COMMAND,
+  DEMO_SHELL_H2R_COMMAND_ACK,
   DEMO_SHELL_H2R_QUERY,
   DEMO_SHELL_H2R_QUERY_RESULT,
   MF_REMOTE_A_ID,
   MF_REMOTE_B_ID,
   MF_REMOTE_C_ID,
+  PLATFORM_BRIDGE_ACCESS_TOKEN,
   PLATFORM_MESSAGE_V1,
   platformMessageEventSchema,
   platformMessagingValidators,
@@ -37,3 +41,5 @@ export * from './lib/platform-messaging/services/platform-welcome-last-message.s
 export * from './lib/platform-messaging/welcome-remote-participant.token';
 export * from './lib/platform-messaging/services/demo-shell-h2r-query-remote-handler.service';
 export * from './lib/platform-messaging/platform-message/demo-shell-h2r-query-bootstrap.provider';
+export * from './lib/platform-messaging/services/demo-shell-h2r-command-remote-handler.service';
+export * from './lib/platform-messaging/platform-message/demo-shell-h2r-command-bootstrap.provider';

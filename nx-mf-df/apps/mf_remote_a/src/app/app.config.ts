@@ -8,6 +8,7 @@ import { MessageService } from 'primeng/api';
 import {
   MF_REMOTE_A_ID,
   PLATFORM_PARTICIPANT_ID,
+  provideDemoShellH2rCommandRemoteHandlerBootstrap,
   provideDemoShellH2rQueryRemoteHandlerBootstrap,
   providePlatformMessageListenerBootstrap,
   provideWorkspacePrimeNG,
@@ -25,5 +26,6 @@ export const appConfig: ApplicationConfig = {
     { provide: PLATFORM_PARTICIPANT_ID, useValue: MF_REMOTE_A_ID },
     providePlatformMessageListenerBootstrap(),
     provideDemoShellH2rQueryRemoteHandlerBootstrap(),
+    provideDemoShellH2rCommandRemoteHandlerBootstrap(),
   ],
 };
