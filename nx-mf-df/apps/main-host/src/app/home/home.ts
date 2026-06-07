@@ -14,4 +14,18 @@ export class Home {
     fontWeight: '600',
     color: 'magenta',
   };
+
+  protected readonly platformCommunicationPackage =
+    '@lkovari/microfrontend-platform-communication';
+
+  protected readonly platformCommunicationVersion = '0.3.2';
+
+  protected readonly demoQueryPurpose =
+    'Send a host-to-remote query over the bus and wait for the correlated result — exercises request() with expectedResult.';
+
+  protected readonly demoCommandPurpose =
+    'Fire a command at a remote and wait for its ACK — exercises sendCommand() with ackTimeoutMs.';
+
+  protected readonly demoQueuePurpose =
+    'Tracks in-flight demo queries (outgoing and incoming) so you can inspect status and reply when a remote asks the host.';
 }

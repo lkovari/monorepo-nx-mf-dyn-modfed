@@ -1,6 +1,9 @@
 import { TestBed } from '@angular/core/testing';
 import { HOST_BRIDGE_TOKEN } from '@lkovari/microfrontend-platform-communication/angular';
-import { createPlatformEventMessage } from '@nx-mf-df/contracts-platform-messaging';
+import {
+  createPlatformEventMessage,
+  PLATFORM_BRIDGE_ACCESS_TOKEN,
+} from '@nx-mf-df/contracts-platform-messaging';
 
 import {
   peekReplayMessagesForParticipant,
@@ -60,6 +63,10 @@ describe('MessageSenderService', () => {
     const result = service.trySend(message);
     expect(result?.accepted).toBe(true);
     expect(tryPublish).toHaveBeenCalledOnce();
+    expect(tryPublish).toHaveBeenCalledWith(
+      message,
+      PLATFORM_BRIDGE_ACCESS_TOKEN,
+    );
   });
 
   it('appends accepted platform messages to replay storage', () => {

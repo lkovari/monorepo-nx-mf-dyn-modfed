@@ -24,7 +24,12 @@
     },
     "test": {
       "executor": "@nx/angular:unit-test",
-      "options": {}
+      "options": {},
+      "configurations": {
+        "coverage": {
+          "coverage": true
+        }
+      }
     },
     "lint": {
       "executor": "@nx/eslint:lint"

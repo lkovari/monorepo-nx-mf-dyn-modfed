@@ -72,6 +72,8 @@ describe('DemoQueryQueueService', () => {
     expect(publish).toHaveBeenCalledOnce();
     const published = publish.mock.calls[0]?.[0];
     expect(published.messageName).toBe(DEMO_SHELL_H2R_QUERY_RESULT);
+    expect(published.causationId).toBe(req.messageId);
+    expect(published.correlationId).toBe(req.correlationId);
     expect(published.payload.answer).toBe('Pong');
     expect(service.responsePrompt()).toBeNull();
     expect(service.entries()[0]?.status).toBe('completed');

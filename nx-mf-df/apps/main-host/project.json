@@ -38,6 +38,11 @@
       "executor": "@angular/build:unit-test",
       "options": {
         "buildTarget": "main-host:esbuild:development"
+      },
+      "configurations": {
+        "coverage": {
+          "coverage": true
+        }
       }
     },
     "serve-static": {

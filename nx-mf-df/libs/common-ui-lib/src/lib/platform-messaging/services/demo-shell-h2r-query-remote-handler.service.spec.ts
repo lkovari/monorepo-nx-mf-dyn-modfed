@@ -8,6 +8,7 @@ import {
   MF_REMOTE_A_ID,
   MF_REMOTE_B_ID,
   MF_REMOTE_C_ID,
+  PLATFORM_BRIDGE_ACCESS_TOKEN,
 } from '@nx-mf-df/contracts-platform-messaging';
 import { Subject } from 'rxjs';
 
@@ -17,9 +18,16 @@ import { RemotePlatformBusService } from './remote-platform-bus.service';
 import { PLATFORM_PARTICIPANT_ID } from '../tokens';
 
 describe('DemoShellH2rQueryRemoteHandlerService', () => {
+  const bridgeKey = '__MFE_BRIDGE__';
   let handlers: Map<string, (message: unknown) => void>;
   let routerEvents: Subject<NavigationEnd>;
   let routerUrl: string;
+
+  afterEach(() => {
+    Reflect.deleteProperty(window, bridgeKey);
+    vi.useRealTimers();
+    TestBed.resetTestingModule();
+  });
 
   beforeEach(() => {
     handlers = new Map();
@@ -173,5 +181,51 @@ describe('DemoShellH2rQueryRemoteHandlerService', () => {
       ],
     });
     expect(() => TestBed.inject(DemoShellH2rQueryRemoteHandlerService)).not.toThrow();
+  });
+
+  it('subscribes via window bridge when BUS_TOKEN is absent', () => {
+    vi.useFakeTimers();
+    const bridgeHandlers = new Map<string, (message: unknown) => void>();
+    const bus = {
+      subscribe: (
+        messageName: string,
+        handler: (message: unknown) => void,
+        opts: { subscriberId: string },
+      ) => {
+        bridgeHandlers.set(`${messageName}:${opts.subscriberId}`, handler);
+        return vi.fn();
+      },
+    };
+    TestBed.resetTestingModule();
+    TestBed.configureTestingModule({
+      providers: [
+        DemoShellH2rQueryRemoteHandlerService,
+        DemoQueryQueueService,
+        RemotePlatformBusService,
+        {
+          provide: Router,
+          useValue: {
+            url: '/mf_remote_a',
+            events: new Subject().asObservable(),
+          },
+        },
+        { provide: PLATFORM_PARTICIPANT_ID, useValue: MF_REMOTE_A_ID },
+      ],
+    });
+    TestBed.inject(DemoShellH2rQueryRemoteHandlerService);
+    expect(bridgeHandlers.size).toBe(0);
+
+    Reflect.set(window, '__MFE_BRIDGE__', {
+      appId: 'main-host',
+      remotes: ['mf_remote_a'],
+      getBus: (token?: string) =>
+        token === PLATFORM_BRIDGE_ACCESS_TOKEN ? bus : null,
+      tryPublish: () => ({ accepted: true }),
+      dispose: () => undefined,
+    });
+    vi.advanceTimersByTime(100);
+    expect(
+      bridgeHandlers.has(`${DEMO_SHELL_H2R_QUERY}:${MF_REMOTE_A_ID}`),
+    ).toBe(true);
   });
 });

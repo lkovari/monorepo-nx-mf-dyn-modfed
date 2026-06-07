@@ -38,6 +38,11 @@
       "executor": "@angular/build:unit-test",
       "options": {
         "buildTarget": "mf_remote_a:esbuild:development"
+      },
+      "configurations": {
+        "coverage": {
+          "coverage": true
+        }
       }
     },
     "serve-static": {

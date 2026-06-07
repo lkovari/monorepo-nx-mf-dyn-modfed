@@ -22,7 +22,7 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Header {
-  readonly lastUpdate = Date.parse('2026-05-31T23:17:00');
+  readonly lastUpdate = Date.parse('2026-06-07T23:11:24');
 
   private readonly router = inject(Router);
 

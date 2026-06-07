@@ -6,6 +6,7 @@ import { MessageService } from 'primeng/api';
 import { Subject } from 'rxjs';
 import {
   MF_REMOTE_A_ID,
+  PLATFORM_BRIDGE_ACCESS_TOKEN,
   PLATFORM_MESSAGE_V1,
   SHELL_HOST_ID,
 } from '@nx-mf-df/contracts-platform-messaging';
@@ -24,10 +25,17 @@ import { PlatformMessageListenerService } from './platform-message-listener.serv
 import { RemotePlatformBusService } from './remote-platform-bus.service';
 
 describe('PlatformMessageListenerService', () => {
+  const bridgeKey = '__MFE_BRIDGE__';
   let routerEvents: Subject<NavigationEnd>;
   let routerUrl: string;
   let messageHandler: ((message: unknown) => void) | undefined;
   let messageServiceAdd: ReturnType<typeof vi.fn>;
+
+  afterEach(() => {
+    Reflect.deleteProperty(window, bridgeKey);
+    vi.useRealTimers();
+    TestBed.resetTestingModule();
+  });
 
   beforeEach(() => {
     clearReplayStorage();
@@ -256,6 +264,55 @@ describe('PlatformMessageListenerService', () => {
       PLATFORM_MESSAGE_V1,
       expect.any(Function),
       { subscriberId: SHELL_HOST_ID },
+    );
+  });
+});
+
+describe('PlatformMessageListenerService remote bridge fallback', () => {
+  const bridgeKey = '__MFE_BRIDGE__';
+
+  afterEach(() => {
+    Reflect.deleteProperty(window, bridgeKey);
+    vi.useRealTimers();
+  });
+
+  it('subscribes when window bridge becomes available without BUS_TOKEN', () => {
+    vi.useFakeTimers();
+    const subscribe = vi.fn().mockReturnValue(vi.fn());
+    const bus = { subscribe };
+    clearReplayStorage();
+    TestBed.resetTestingModule();
+    TestBed.configureTestingModule({
+      providers: [
+        PlatformMessageListenerService,
+        RemotePlatformBusService,
+        {
+          provide: Router,
+          useValue: {
+            url: '/mf_remote_a',
+            events: new Subject().asObservable(),
+          },
+        },
+        { provide: MessageService, useValue: { add: vi.fn() } },
+        { provide: PLATFORM_PARTICIPANT_ID, useValue: MF_REMOTE_A_ID },
+      ],
+    });
+    TestBed.inject(PlatformMessageListenerService);
+    expect(subscribe).not.toHaveBeenCalled();
+
+    Reflect.set(window, bridgeKey, {
+      appId: 'main-host',
+      remotes: ['mf_remote_a'],
+      getBus: (token?: string) =>
+        token === PLATFORM_BRIDGE_ACCESS_TOKEN ? bus : null,
+      tryPublish: () => ({ accepted: true }),
+      dispose: () => undefined,
+    });
+    vi.advanceTimersByTime(100);
+    expect(subscribe).toHaveBeenCalledWith(
+      PLATFORM_MESSAGE_V1,
+      expect.any(Function),
+      { subscriberId: MF_REMOTE_A_ID },
     );
   });
 });

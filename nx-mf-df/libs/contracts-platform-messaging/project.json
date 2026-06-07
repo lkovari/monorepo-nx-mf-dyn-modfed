@@ -20,6 +20,11 @@
       "options": {
         "command": "vitest run",
         "cwd": "libs/contracts-platform-messaging"
+      },
+      "configurations": {
+        "coverage": {
+          "command": "vitest run --coverage"
+        }
       }
     }
   }

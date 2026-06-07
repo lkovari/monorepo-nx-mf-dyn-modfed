@@ -18,6 +18,10 @@ describe('DemoShellH2rCommandRemoteHandlerService', () => {
   let handlers: Map<string, (message: unknown) => void>;
   let publish: ReturnType<typeof vi.fn>;
 
+  afterEach(() => {
+    TestBed.resetTestingModule();
+  });
+
   beforeEach(() => {
     handlers = new Map();
     publish = vi.fn();

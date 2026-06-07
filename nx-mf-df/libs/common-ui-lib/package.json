@@ -6,7 +6,7 @@
     "@angular/core": "^21.2.0",
     "@angular/forms": "^21.2.0",
     "@angular/router": "^21.2.0",
-    "@lkovari/microfrontend-platform-communication": "^0.3.0",
+    "@lkovari/microfrontend-platform-communication": "^0.3.2",
     "@primeuix/themes": "^2.0.0",
     "primeng": "^21.0.0",
     "rxjs": "^7.8.0",
